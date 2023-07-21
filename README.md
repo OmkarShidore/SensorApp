@@ -1,7 +1,7 @@
 # sensor
 
 ### Architecture Overview:
-<img src="https://raw.githubusercontent.com/OmkarShidore/sensor/master/src/doc/sensor_app_architecture.jpg" alt="GitHub Logo" style="width: 800px;"/>
+<img src="https://raw.githubusercontent.com/OmkarShidore/SensorApp/master/src/doc/sensor_app_architecture.jpg" alt="GitHub Logo" style="width: 800px;"/>
 
 
 ### Installation guide.

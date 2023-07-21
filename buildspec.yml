@@ -1,0 +1,11 @@
+version: 0.2
+
+env:
+  shell: bash
+
+phases:
+  build:
+    commands:
+      - echo Running mode- $mode . . .
+      - sh ./deployment/$mode.sh
+      - echo done mode- $mode. . .

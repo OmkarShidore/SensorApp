@@ -1,0 +1,21 @@
+FROM public.ecr.aws/lambda/python:3.10
+
+# Declare build arguments
+ARG REGION_ARG
+ARG SECRET_ARN_ARG
+ARG DB_IDENTIFIER_ARG
+ARG DB_NAME_ARG
+ARG DB_RESOURCE_ARN_ARG
+
+ENV REGION=$REGION_ARG
+ENV SECRET_ARN=$SECRET_ARN_ARG
+ENV DB_IDENTIFIER=$DB_IDENTIFIER_ARG
+ENV DB_NAME=$DB_NAME_ARG
+ENV DB_RESOURCE_ARN=$DB_RESOURCE_ARN_ARG
+
+COPY ./requirements.txt ./requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+CMD ["lambda_function.lambda_handler"]

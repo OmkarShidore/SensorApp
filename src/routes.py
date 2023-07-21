@@ -49,7 +49,7 @@ def update_device(device_id):
         response = Task().update_device(device_id=device_id, new_device_name=new_device_name)
         return response
 
-@app.route('/get_devices', methods=['POST'])
+@app.route('/get_devices', methods=['GET'])
 def get_devices():
     """
     organization_id: uuid of the organization
@@ -78,7 +78,7 @@ def add_sensor(device_id):
         response = Task().add_sensor(sensor_type=sensor_type, device_id=device_id)
         return response
 
-@app.route('/<device_id>/get_sensors', methods=['POST'])
+@app.route('/<device_id>/get_sensors', methods=['GET'])
 def get_sensors(device_id):
     """
     Used to add sensor to sensors table.

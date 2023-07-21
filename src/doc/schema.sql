@@ -1,3 +1,14 @@
+
+
+--------DELETE TABLE-----------
+DROP TABLE IF EXISTS organizations;
+DROP TABLE IF EXISTS devices;
+DROP TABLE IF EXISTS sensors;
+DROP TABLE IF EXISTS sensor_data;
+
+
+
+
 -- Create organizations
 
 CREATE TABLE organizations (
@@ -35,14 +46,6 @@ CREATE TABLE sensor_data (
     value FLOAT NOT NULL,
     created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
-
-
---------DELETE TABLE-----------
-DROP TABLE IF EXISTS organizations;
-DROP TABLE IF EXISTS devices;
-DROP TABLE IF EXISTS sensors;
-DROP TABLE IF EXISTS sensor_data;
 
 
 

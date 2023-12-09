@@ -20,12 +20,15 @@ CREATE TABLE organizations (
     modified_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE organizations (
-    organization_id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
-    organization_name VARCHAR(255) NOT NULL,
-    created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    modified_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+-- Test entries for organizations
+INSERT INTO organizations (organization_id, organization_name)
+VALUES (uuid_generate_v4(), 'Neurithm');
+INSERT INTO organizations (organization_id, organization_name)
+VALUES (uuid_generate_v4(), 'Wingman');
+INSERT INTO organizations (organization_id, organization_name)
+VALUES (uuid_generate_v4(), 'GradientLabs');
+
+
 
 CREATE TABLE devices (
     device_id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,

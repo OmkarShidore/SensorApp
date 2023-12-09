@@ -8,6 +8,8 @@ DROP TABLE IF EXISTS sensor_data;
 
 
 
+-- Install UUID extension
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 -- Create organizations
 
